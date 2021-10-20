@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react'
+import StartPage from './Components/Startpage';
+import HomePage from './Components/HomePage'
 
 function App() {
+  const [showFrontPage, setShowFrontPage] = useState('')
+
+  function correctInfo(info){
+    if(typeof info === 'string'){
+      alert(`Error: ${info}`)
+    } else{
+      setShowFrontPage(info)
+    }
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {showFrontPage ? <HomePage info = {showFrontPage}/> : <StartPage change = {correctInfo}/>}
     </div>
   );
 }
