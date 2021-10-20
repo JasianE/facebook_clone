@@ -4,7 +4,7 @@ async function acceptRequest(user, friend){
         friend: friend
     } 
     try{
-        const request = await fetch('https://glacial-tor-90347.herokuapp.com/add', {
+        const request = await fetch('https://poopoo123123.herokuapp.com/add', {
             mode: 'cors',
             method: 'POST',
             headers: {"Content-Type": "application/json" },

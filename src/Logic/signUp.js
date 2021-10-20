@@ -1,6 +1,6 @@
 async function signUp(user){
     try{
-        const correctInfo = await fetch('https://glacial-tor-90347.herokuapp.com/sign-up', {
+        const correctInfo = await fetch('https://poopoo123123.herokuapp.com/sign-up', {
             mode: 'cors',
             method: 'POST',
             headers: {"Content-Type": "application/json" },

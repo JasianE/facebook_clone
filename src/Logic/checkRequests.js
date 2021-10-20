@@ -7,7 +7,7 @@
 
 async function checkRequests(user, friend){
     try{
-        const request = await fetch(`https://glacial-tor-90347.herokuapp.com/${user.username}/${friend.username}/check`, {mode: 'cors'})
+        const request = await fetch(`https://poopoo123123.herokuapp.com/${user.username}/${friend.username}/check`, {mode: 'cors'})
         const data = await request.json()
         return data
     } catch(err){
