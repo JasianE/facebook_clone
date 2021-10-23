@@ -8,6 +8,7 @@ function UserPage(props){
     useEffect(() => {
         (async function(){
             const response = await checkRequests(props.user, props.friend).then(result => result)
+            console.log(response)
             setRequested(response)
         })()
     }, [])
@@ -21,7 +22,7 @@ function UserPage(props){
         <div>
             <h1>{props.friend.username}</h1>
             <h2>{`${props.friend.firstname} ${props.friend.lastname}`}</h2>
-            {requested === 'Good' ? <button onClick = {handleSubmit}>Send Request</button> : <h2>Pending...</h2>
+            {requested === 'Good' ? <button onClick = {handleSubmit}>Send Request</button> : requested === 'b' ? <h2>Pending...</h2> : null /*Add Unfriend */
             }
         </div>
     )

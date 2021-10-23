@@ -1,6 +1,6 @@
 async function acceptRequest(user, friend){
     const userFriend = {
-        user: user.username, 
+        user: user, 
         friend: friend
     } 
     try{

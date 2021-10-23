@@ -3,6 +3,7 @@ import Nav from './Nav'
 import FriendSide from './FriendSide'
 import SearchUser from './SearchUser'
 import UserPage from './UserPage'
+import MakeAPost from './MakeAPost'
 
 function HomePage(props){
     const [searchedUser, setSearchedUser] = useState('')
@@ -13,7 +14,7 @@ function HomePage(props){
         setSearchedUser(e)
     }
     function resset(e){
-
+        setReset(e)
     }
     return(
         <div>
@@ -21,8 +22,11 @@ function HomePage(props){
                 <Nav />
                 <h1>{user.username}</h1>
                 <h2>{searchedUser.username}</h2>
+                <div className = 'center'>
+                    <MakeAPost user = {user}/>
+                </div>
                 <aside>
-                    <FriendSide user = {user}/>
+                    <FriendSide user = {user} reset = {resset}/>
                     <SearchUser change = {change}/>
                 </aside>
             </div>
