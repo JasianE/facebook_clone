@@ -9,7 +9,7 @@ function FriendSide(props){
             {props.user.requests.map((key) => {
                 i++
                 return(
-                    <Request restart = {props.reset} key = {i} user = {props.user} info = {key._id}/>
+                    <Request key = {i} user = {props.user} info = {key._id}/>
                 )
             })
             }
