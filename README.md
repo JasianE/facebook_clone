@@ -2,12 +2,12 @@
 ### Final project for learning node :(
 
 ## Features
--Users
--Posts
--Likes
--Comments
--Friends
--Other stuff maybe
+-Users <br/>
+-Posts <br/>
+-Likes <br/>
+-Comments <br/>
+-Friends <br/>
+-Other stuff maybe <br/>
 -"Security"
 
 ## Process
