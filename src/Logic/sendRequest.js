@@ -1,4 +1,4 @@
-async function sendRequest(user, friend){
+async function sendRequest(user, friend, token){
     const friendUser = {
         user: user,
         friend: friend
@@ -7,7 +7,7 @@ async function sendRequest(user, friend){
         const request = await fetch('https://poopoo123123.herokuapp.com/send', {
             mode: 'cors',
             method: 'POST',
-            headers: {"Content-Type": "application/json" },
+            headers: {"Content-Type": "application/json", "Authorization": 'Bearer ' + token},
             body: JSON.stringify(friendUser)
             })
         const request2 = await request.json()

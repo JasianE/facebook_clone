@@ -34,7 +34,7 @@ function Timeline(props){
         <div>
             {loaded ? posts ? posts.map((key) => {
                 i++
-                return (<Post post = {key} key = {i} user = {props.user}/>) 
+                return (<Post post = {key} key = {i} user = {props.user} token = {props.token}/>) 
             }) : null : null }
         </div>
     )

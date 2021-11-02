@@ -9,7 +9,7 @@ function MakeAPost(props){
     } 
     async function handleSubmit(e){
         e.preventDefault()
-        const result = await writePost(props.user, postText).then((result) => {return result})
+        const result = await writePost(props.user, postText, props.token).then((result) => {return result})
         console.log(result)
     }
 

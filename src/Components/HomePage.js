@@ -25,18 +25,18 @@ function HomePage(props){
     }
     return(
         <div>
+            <Nav reset = {props.change}/>
             {searchedUser ? <UserPage friend = {searchedUser} user = {user}/> : 
             editProfile ? <EditProfile user = {user} goBack = {editProfileTime}/> : index ? 
-            <Index user = {user}/> : 
+            <Index user = {user} goBack = {indexTime}/> : 
             <div>
-                <Nav />
                 <h1>{user.username}</h1>
                 <h2>{searchedUser.username}</h2>
                 <button onClick = {() => {editProfileTime(true)}}>Edit Profile</button>
                 <button onClick = {() => {indexTime(true)}}>Index</button>
                 <div className = 'center'>
-                    <MakeAPost user = {user}/>
-                    <Timeline  user = {user}/>
+                    <MakeAPost user = {user} token = {props.token}/>
+                    <Timeline  user = {user} token = {props.token}/>
                 </div>
                 <aside>
                     <FriendSide user = {user}/>

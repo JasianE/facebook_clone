@@ -1,4 +1,3 @@
-import { PROPERTY_TYPES } from '@babel/types'
 import React, {useState, useEffect} from 'react'
 import findEveryone from '../Logic/findEveryone'
 import User from './Mini/User'
@@ -20,8 +19,13 @@ function Index(props){
         })()
     }, [])
 
+    function goBack(e){
+        e.preventDefault()
+        props.goBack(false)
+    }
     return(
         <div>
+            <button onClick = {goBack}>Home Page</button>
             <h1>Users</h1>
             <hr/>
             {loaded ? users.map((key) => {

@@ -1,0 +1,98 @@
+.background{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(255,165,0);
+    text-align: center;
+    flex-direction: column;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Title{
+    font-size: 92px;
+}
+.userActions{
+    color: black;
+    height: 60vh;
+    width: 50%;
+    align-self: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background-color: white;
+    border-radius: 16px;
+}
+.signUp:hover{
+    color: rgb(233, 233, 233);
+    cursor: pointer;
+}
+.log{
+    display: flex;
+    margin-left: 24px;
+    font-weight: 300;
+}
+.form{
+    width: 400px;
+    height: 60px;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: rgb(199, 199, 199);
+    display: flex;
+    margin-left: 24px;
+    font-size: 24px;
+    padding-left: 6px;
+    margin-top: 16px;
+}
+.Text{
+    display: flex;
+    margin-left: 24px;
+    font-weight: 300;
+}
+.logInButt{
+    width: 412px;
+    display: flex;
+    margin-left: 24px;
+    margin-top: 16px;
+    height: 60px;
+    border-style: none;
+    background-color: rgb(255, 195, 82);
+    color: white;
+    font-size: 28px;
+    border-radius: 6px;
+    padding-top: 10px;
+    padding-left: 40x;
+}
+.logInButt:hover{
+    cursor: pointer;
+    background-color: rgb(250, 177, 42);
+}
+.logInButt2{
+    width: 412px;
+    display: flex;
+    margin-left: 24px;
+    margin-top: 16px;
+    height: 60px;
+    border-style: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(3, 3, 3);
+    font-size: 28px;
+    border-radius: 6px;
+    padding-top: 10px;
+    padding-left: 40x;
+}
+.logInButt2:hover{
+    cursor: pointer;
+    background-color: rgb(228, 228, 228);
+}
+.bubble{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-self: center;
+    position: absolute;
+    left: 60vh;
+    top: 10vh;
+    background-color: rgb(255, 166, 0);
+    padding-bottom: 36px;
+    border-radius: 12px;
+}

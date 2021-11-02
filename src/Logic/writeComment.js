@@ -1,4 +1,4 @@
-async function writeComment(post, comment, user){
+async function writeComment(post, comment, user, token){
     console.log(user)
     const body = {
         user: user,
@@ -9,7 +9,7 @@ async function writeComment(post, comment, user){
         const request = await fetch('https://poopoo123123.herokuapp.com/writeComment', {
             mode: 'cors',
             method: 'POST',
-            headers: {"Content-Type": "application/json" },
+            headers: {"Content-Type": "application/json", "Authorization": 'Bearer ' + token},
             body: JSON.stringify(body)
         })
         const result = await request.json()

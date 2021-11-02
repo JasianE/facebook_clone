@@ -19,19 +19,19 @@ function Post(props){
     }, [])
     function like(e){
         e.preventDefault()
-        likePost(props.user, 'poo', props.post)
+        likePost(props.user, 'poo', props.post, props.token)
         setLiked(true)
         setLikes(prevState => prevState + 1)
     }
     function unLike(e){
         e.preventDefault()
-        unLikePost(props.user, 'poo', props.post)
+        unLikePost(props.user, 'poo', props.post, props.token)
         setLiked(false)
         setLikes(prevState => prevState - 1)
     }
     function writeCommente(e){
         e.preventDefault()
-        writeComment(props.post, comment, props.user.username)
+        writeComment(props.post, comment, props.user.username, props.token)
         setComment('')
     }
     function handleChange(e){

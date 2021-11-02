@@ -5,17 +5,21 @@ import HomePage from './Components/HomePage'
 
 function App() {
   const [showFrontPage, setShowFrontPage] = useState('')
+  const [token, setToken] = useState('')
 
   function correctInfo(info){
-    if(typeof info === 'string'){
+    if(typeof info === 'string' && info !== 'poo'){
       alert(`Error: ${info}`)
-    } else{
-      setShowFrontPage(info)
+    } else if(info !== 'poo'){
+      setShowFrontPage(info.user)
+      setToken(info.token)
+    } else {
+      setShowFrontPage(false)
     }
   }
   return (
     <div className="App">
-      {showFrontPage ? <HomePage info = {showFrontPage}/> : <StartPage change = {correctInfo}/>}
+      {showFrontPage ? <HomePage info = {showFrontPage} change = {correctInfo} token = {token}/> : <StartPage change = {correctInfo}/>}
     </div>
   );
 }

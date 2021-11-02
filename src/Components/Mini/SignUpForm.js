@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import signUp from '../../Logic/signUp'
 
-function SignUpForm(){
+function SignUpForm(props){
     const [waiting, setWaiting] = useState('')
     const [username, setUserName] = useState('')
     const [firstname, setFirstName] = useState('')
@@ -38,6 +38,9 @@ function SignUpForm(){
         setUserName('')
         setEmail('')
     }
+    function cancel(){
+        props.e(false)
+    }
     async function handleSubmit(e){
         e.preventDefault()
         const user = {
@@ -59,53 +62,60 @@ function SignUpForm(){
                 alert('Error Occured, User Not Created')
             }
         })
+        props.e(false)
 
     }
     return(
-        <div>
+        <div className = 'container'>
             {waiting ? <h1>Waiting...</h1> :
-            <form>
-                <h2>Username</h2>
+            <form className = 'bubble'>
+                <h2 className = 'Text'>Username</h2>
                 <input 
                 type = 'text'
                 name = 'username'
                 value = {username}
                 onChange = {handleChange}
+                className = 'form start1'
                 required
                 />
-                <h2>Firstname</h2>
+                <h2 className = 'Text'>Firstname</h2>
                 <input 
                 type = 'text'
                 name = 'first'
                 value = {firstname}
                 onChange = {handleChange}
                 required
+                className = 'form start1'
                 />
-                <h2>Lastname</h2>
+                <h2 className = 'Text'>Lastname</h2>
                 <input 
                 name = 'last'
                 type = 'text'
                 value = {lastname}
                 onChange = {handleChange}
+                className = 'form start1'
                 required
                 />
-                <h2>Email</h2>
+                <h2 className = 'Text'>Email</h2>
                 <input 
                 name = 'email'
                 type = 'email'
                 value = {email}
                 onChange = {handleChange}
+                className = 'form start1'
                 required
                 />
-                <h2>Password</h2>
+                <h2 className = 'Text'>Password</h2>
                 <input 
                 name = 'pass'
                 type = 'password'
                 value = {password}
                 onChange = {handleChange}
+                className = 'form start1'
                 required
                 />
-                <button onClick = {handleSubmit}>Create User</button>
+                <button className = 'logInButt2' onClick = {handleSubmit}>Create User</button>
+                <button className = 'logInButt2' onClick = {cancel}>Cancel</button>
             </form>
             }
         </div>
