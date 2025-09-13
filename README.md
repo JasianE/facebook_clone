@@ -10,7 +10,6 @@ A social media web application built using the **MERN stack** (MongoDB, Express,
 - **Posts**: Create, edit, and delete posts  
 - **Comments**: Comment on posts and view other users’ comments  
 - **Likes**: Like or unlike posts and comments  
-- **Real-time Updates** (optional): Using WebSockets for live notifications  
 
 ---
 
