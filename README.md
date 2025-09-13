@@ -1,6 +1,6 @@
 # MERN Facebook Clone
 
-A social media web application built using the **MERN stack** (MongoDB, Express, React, Node.js). This project implements features similar to Facebook, including user authentication, posts, comments, and likes.
+A social media web application built using the **MERN stack** (MongoDB, Express, React, Node.js). This project implements features similar to Facebook, including user authentication, posts, comments, and likes. A project created for TheOdinProject! <-- The goat learning platform
 
 ---
 
@@ -13,3 +13,13 @@ A social media web application built using the **MERN stack** (MongoDB, Express,
 - **Real-time Updates** (optional): Using WebSockets for live notifications  
 
 ---
+
+```bash
+client/
+├── src/
+│   ├── components/    # Reusable UI components (Navbar, Post, Comment, etc.)
+│   ├── logic/      # API request functions
+│   ├── App.js         # Root component with routes
+│   └── index.js       # Entry point
+├── public/
+└── package.json # I LOVE NPM and WEBPACK!!
